@@ -1,0 +1,120 @@
+.banner-wrapper {
+  @apply w-screen h-screen;
+
+  .swiper-button-next.banner-button-next::after,
+  .swiper-button-prev.banner-button-prev::after {
+    display: none;
+  }
+
+  .swiper-button-next.banner-button-next {
+    @apply bg-[rgba(242,166,141,0.4)] text-white h-[60px] w-[60px] p-[15px] flex justify-center items-center transition-all duration-300 ease-in-out top-[55%] right-[30px] hover:bg-primary text-xl;
+  }
+  .swiper-button-prev.banner-button-prev {
+    @apply bg-[rgba(242,166,141,0.4)] text-white h-[60px] w-[60px] p-[15px] flex justify-center items-center transition-all duration-300 ease-in-out top-[55%] left-[30px] hover:bg-primary text-xl;
+  }
+
+  .banner-slide {
+    position: relative;
+
+    & .banner-slide__item {
+      @apply text-white absolute flex items-center gap-5 justify-center flex-col left-1/2 -translate-x-1/2 -translate-y-1/2 leading-7 w-[80vw];
+
+      top: calc(50% + 35px);
+
+      h3,
+      h2,
+      p,
+      a {
+        @apply invisible translate-y-[50px];
+      }
+
+      h3 {
+        @apply text-primary font-medium drop-shadow-lg;
+      }
+
+      h2 {
+        @apply text-white font-semibold drop-shadow-lg text-8xl capitalize;
+
+        animation-duration: 0.8s !important;
+
+        font-family: 'Cormorant Garamond', sans-serif;
+      }
+
+      a {
+        animation-duration: 0.8s !important;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1400px) {
+    @apply h-[70vh];
+
+    .banner-slide {
+      .banner-slide__item {
+        h3 {
+          @apply text-2xl;
+        }
+
+        h2 {
+          @apply text-6xl;
+        }
+
+        p {
+          @apply text-xl;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    @apply h-[60vh];
+
+    .banner-slide {
+      .banner-slide__item {
+        h3 {
+          @apply text-xl;
+        }
+
+        h2 {
+          @apply text-5xl;
+        }
+
+        p {
+          @apply text-sm;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    @apply h-[50vh];
+
+    .swiper-button-next.banner-button-next,
+    .swiper-button-prev.banner-button-prev {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    @apply h-[40vh];
+
+    .banner-slide {
+      .banner-slide__item {
+        p {
+          display: none;
+        }
+        h3 {
+          @apply text-xs;
+        }
+
+        h2 {
+          @apply text-3xl;
+        }
+
+        .spa-button {
+          @apply text-xs px-4 py-3;
+        }
+      }
+    }
+  }
+}

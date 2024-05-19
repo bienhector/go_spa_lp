@@ -1,0 +1,13 @@
+.why-choose-us-wrapper {
+  @apply pt-28;
+
+  @media screen and (max-width: 1000px) {
+    .why-choose-us-left {
+      grid-column: span 12 / 12 span;
+    }
+
+    .why-choose-us-right {
+      grid-column: span 12 / 12 span;
+    }
+  }
+}

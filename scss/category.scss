@@ -1,0 +1,5 @@
+.category {
+  .category-item {
+    @apply absolute bottom-[-50%] transition-all duration-500 w-[90%] bg-white -translate-x-1/2 left-1/2 py-4;
+  }
+}

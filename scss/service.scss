@@ -1,0 +1,13 @@
+.service-border {
+  @apply flex-1 ml-2.5 mr-2.5 border-b border-dashed border-stone-400 h-4 w-full -translate-y-1/2 -top-1/2 relative;
+
+  // @media screen and (max-width: 900px) {
+  //   display: none;
+  // }
+}
+
+.service-wrapper {
+  h4 {
+    font-family: 'Cormorant Garamond', sans-serif;
+  }
+}

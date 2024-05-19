@@ -1,0 +1,13 @@
+.review-wrapper {
+  background-image: url('./images/review.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+
+  .review-slide {
+    h2 {
+      font-family: 'Cormorant Garamond', sans-serif;
+    }
+  }
+}

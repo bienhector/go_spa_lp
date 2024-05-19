@@ -1,0 +1,17 @@
+.feature-left_content {
+  h2 {
+    font-family: 'Cormorant Garamond', sans-serif;
+  }
+}
+
+.feature {
+  @media screen and (max-width: 1200px) {
+    .feature-left {
+      display: none;
+    }
+
+    .feature-right {
+      grid-column: span 12 / 12 span;
+    }
+  }
+}

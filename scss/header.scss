@@ -1,0 +1,45 @@
+.header-wrapper {
+  @apply flex fixed top-0 left-0 gap-2 justify-between items-center px-[20px] bg-transparent w-screen z-[2] transition-all md:px-[50px];
+
+  ul {
+    @apply flex gap-10 items-center text-[18px] font-medium text-white;
+
+    li {
+      @apply transition-all hover:text-primary;
+
+      .active a {
+        color: var(--primary);
+      }
+    }
+  }
+
+  &.dark {
+    @apply shadow-lg;
+    ul {
+      @apply text-black;
+    }
+    @apply bg-white;
+  }
+
+  .header-nav_mobile {
+    @apply absolute top-full w-full bg-white h-0 left-0 text-black flex-col py-0 overflow-hidden hidden;
+
+    li {
+      @apply py-2;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .header-nav {
+      display: none;
+    }
+
+    .header-nav_mobile {
+      display: flex !important;
+    }
+
+    .header-toggle-btn {
+      display: flex !important;
+    }
+  }
+}

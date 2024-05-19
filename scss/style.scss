@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #f2a68d;
+  --secondary: #171717;
+  --tertiary: #f1f1f1;
+  --gray: #666;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Màu nền của scrollbar track */
+::-webkit-scrollbar-track {
+  background: var(--tertiary);
+}
+
+/* Màu của thumb của scrollbar */
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 8px;
+}
+
+/* Khi hover lên scrollbar */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
+::selection {
+  background: var(--primary); /* Màu nền khi chọn */
+  color: #fff; /* Màu chữ khi chọn */
+}
+
+.image-fit-wrapper {
+  @apply w-full h-full block max-w-[160px] py-5;
+}
+
+.image-fit {
+  @apply object-cover w-full h-full;
+}
+
+.overlay {
+  @apply transition-all invisible fixed top-0 left-0 right-0 bottom-0 w-screen h-screen bg-black opacity-30 z-[2] cursor-pointer;
+}
+
+@keyframes fadeInOverlay {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 0.3;
+  }
+}
+
+@keyframes fadeOutOverlay {
+  0% {
+    visibility: visible;
+    opacity: 0.3;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes slideXIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideXOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideAndFadeYIn {
+  0% {
+    transform: translateY(50px);
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes slideInBgBlack {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slideOutBgBlack {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes heightAnimationIn {
+  0% {
+    height: 0px;
+    @apply py-0;
+  }
+  100% {
+    height: 343px;
+    @apply py-6;
+  }
+}
+
+@keyframes heightAnimationOut {
+  0% {
+    height: 343px;
+    @apply py-6;
+  }
+  100% {
+    height: 0px;
+    @apply py-0;
+  }
+}
+
+.height-animation-in {
+  animation: heightAnimationIn 0.6s ease forwards;
+}
+
+.height-animation-out {
+  animation: heightAnimationOut 0.6s ease forwards;
+}
+
+.fade-out-overlay {
+  animation: fadeOutOverlay 0.4s ease forwards;
+}
+
+.slide-and-fade-in {
+  animation: slideAndFadeYIn 0.5s linear forwards;
+}
+
+.slide-in {
+  animation: slideXIn 0.4s ease forwards;
+}
+.slide-out {
+  animation: slideXOut 0.4s ease forwards;
+}
+
+.fade-in-overlay {
+  animation: fadeInOverlay 0.4s ease forwards;
+}
+
+.fade-out-overlay {
+  animation: fadeOutOverlay 0.4s ease forwards;
+}
+
+.swiper {
+  @apply w-full h-full;
+}
+
+.swiper-slide {
+  @apply text-center text-[18px] bg-white flex items-center justify-center;
+}
+
+.swiper-slide img {
+  @apply object-cover h-full w-full block;
+}
+
+.section-title {
+  @apply leading-9 mr-[200px] mb-[30px];
+
+  & .sub-title-v2 {
+    @apply relative px-8 inline-flex mb-3 text-gray;
+
+    &::before {
+      content: '';
+      @apply absolute bg-primary h-[2px] w-[20px] left-0 top-1/2;
+    }
+
+    &::after {
+      content: '';
+      @apply absolute bg-primary h-[2px] w-[20px] right-0 top-1/2;
+    }
+  }
+
+  & .sub-title {
+    @apply relative pl-8 inline-flex mb-3 text-gray;
+
+    &::before {
+      content: '';
+      @apply absolute bg-primary h-[2px] w-[20px] left-0 top-1/2;
+    }
+  }
+
+  & .title {
+    @apply text-6xl font-semibold;
+    font-family: 'Cormorant Garamond', sans-serif;
+  }
+
+  & .section-description {
+    @apply mt-[50px] leading-6 text-gray;
+  }
+
+  @media screen and (max-width: 1000px) {
+    & .title {
+      @apply mr-0;
+    }
+
+    @apply mr-0;
+  }
+}
+
+.container {
+  @apply mx-auto w-full max-w-[1300px];
+}
+
+.social-icon {
+  @apply p-4 bg-primary transition-all duration-300 text-white hover:bg-black w-[40px] h-[40px] flex justify-center items-center shadow-2xl;
+}

@@ -1,0 +1,18 @@
+.spa-button {
+  @apply px-7 relative py-4 bg-primary font-medium text-white overflow-hidden;
+  .spa-button-overlay {
+    @apply bg-black h-full w-full transition-all duration-500 absolute left-[-100%] top-0 z-0;
+  }
+}
+
+.spa-button.mouse-enter {
+  .spa-button-overlay {
+    animation: slideInBgBlack 0.4s ease-in-out forwards;
+  }
+}
+
+.spa-button.mouse-leave {
+  .spa-button-overlay {
+    animation: slideOutBgBlack 0.4s ease-in-out forwards;
+  }
+}

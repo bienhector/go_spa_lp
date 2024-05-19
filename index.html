@@ -4,20 +4,656 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla Tailwind CSS Boilerplate</title>
-    <script type="module" src="main.js" defer></script>
+    <script type="module" src="/js/main.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/10c30652a2.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body class="px-4 h-screen flex items-center justify-center">
-    <div class="bg-white p-8 rounded shadow-md">
-      <h1 class="text-2xl font-semibold mb-4">Welcome to Tailwind CSS!</h1>
-      <p class="text-gray-700">
-        Tailwind CSS is a utility-first CSS framework that helps you quickly
-        build modern and responsive user interfaces.
-      </p>
-      <button
-        class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+  <body class="overflow-x-hidden">
+    <!-- HEADER BEGIN -->
+    <header class="header-wrapper">
+      <a href="#" class="image-fit-wrapper logo">
+        <img src="/images/logo.svg" alt="logo" class="image-fit" />
+      </a>
+      <div class="flex gap-3 items-center">
+        <ul class="header-nav">
+          <li class="active">
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About us</a>
+          </li>
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+          <li class="spa-toggle-button">
+            <a href="#" class="image-fit-wrapper w-[40px] h-[40px]">
+              <img src="/images/menu.svg" alt="menu" class="image-fit" />
+            </a>
+          </li>
+          <li class="overflow-hidden py-3">
+            <a href="#" class="spa-button">
+              <div class="spa-button-overlay"></div>
+              <span class="z-[1] relative">Book Now</span>
+            </a>
+          </li>
+        </ul>
+        <button
+          type="button"
+          class="header-toggle-btn text-xl bg-primary text-white !w-auto !h-[51px] !py-4 !px-5 !hidden items-center justify-center"
+        >
+          <i class="fas fa-align-left"></i>
+        </button>
+      </div>
+      <ul class="header-nav_mobile">
+        <li class="w-full text-center border-b active border-zinc-100">
+          <a href="#" class="block">Home</a>
+        </li>
+        <li class="w-full text-center border-b active border-zinc-100">
+          <a href="#" class="block">About us</a>
+        </li>
+        <li class="w-full text-center border-b active border-zinc-100">
+          <a href="#" class="block">Contact Us</a>
+        </li>
+        <li class="overflow-hidden py-3">
+          <a href="#" class="spa-button">
+            <div class="spa-button-overlay"></div>
+            <span class="z-[1] relative">Book Now</span>
+          </a>
+        </li>
+      </ul>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- OVERLAY BEGIN -->
+    <div class="overlay"></div>
+    <!-- OVERLAY END -->
+
+    <!-- SIDEBAR BEGIN -->
+    <section class="sidebar-wrapper">
+      <a href="#" class="close-icon">
+        <i class="fa-solid fa-xmark"></i>
+      </a>
+      <div class="p-[50px]">
+        <a href="#" class="image-fit-wrapper !h-[70px] !p-0">
+          <img src="/images/logo-dark.svg" alt="logo" class="image-fit" />
+        </a>
+        <div class="sidebar-content">
+          <h1 class="text-3xl font-semibold">About us</h1>
+          <p>
+            Execution is the single biggest factor in achievement so the faster
+            and better your execution.
+          </p>
+        </div>
+        <div class="sidebar-content">
+          <h1 class="text-3xl font-semibold">Contact Info</h1>
+          <p>6580 Allison Turnpike Creminfort, AL 32808-4509</p>
+          <p>
+            Sunday to Tuesday <br />
+            (09:00 To 22:00)
+          </p>
+          <p>
+            Friday to Saturday <br />
+            (11:00 To 19:00)
+          </p>
+        </div>
+        <div class="flex gap-3 justify-start items-center">
+          <a href="#" class="social-icon">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+        <div class="absolute z-[-1] left-0 bottom-0 right-0 w-full h-[80px]">
+          <img
+            src="/images/bg-sidebar-bottom.png"
+            alt="sidebar-image-bottom"
+            class="image-fit"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- SIDEBAR END -->
+
+    <!-- BANNER SWIPER BEGIN -->
+    <section class="z-[1] swiper banner-wrapper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide banner-slide">
+          <img src="/images/slide-01.jpg" alt="slide-01" class="image-fit" />
+          <div class="banner-slide__item">
+            <h3 class="uppercase slide-and-fade-in">spa & beauty center</h3>
+            <h2 class="slide-and-fade-in">Best relax and spa zone</h2>
+            <p class="mb-6 slide-and-fade-in">
+              You are going on a cruise, but when the ship sets sail, you
+              discover it has no rudder
+            </p>
+            <a href="" class="spa-button slide-and-fade-in">
+              <div class="spa-button-overlay"></div>
+              <div class="flex relative gap-4 items-center z-1">
+                <span class="capitalize"> Make Appointment</span>
+                <i class="fa-solid fa-arrow-right-long"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide banner-slide">
+          <img src="/images/slide-02.jpg" alt="slide-02" class="image-fit" />
+          <div class="banner-slide__item">
+            <h3 class="uppercase">spa & beauty center</h3>
+            <h2>Best relax and spa zone</h2>
+            <p class="mb-6">
+              You are going on a cruise, but when the ship sets sail, you
+              discover it has no rudder
+            </p>
+            <a href="" class="spa-button">
+              <div class="spa-button-overlay"></div>
+              <div class="flex relative gap-4 items-center z-1">
+                <span class="capitalize"> Make Appointment</span>
+                <i class="fa-solid fa-arrow-right-long"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next banner-button-next">
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+      <div class="swiper-button-prev banner-button-prev">
+        <i class="fa-solid fa-angle-left"></i>
+      </div>
+    </section>
+    <!-- BANNER SWIPER END -->
+
+    <!-- WHY CHOOSE US BEGIN -->
+    <section
+      class="container grid grid-cols-12 gap-3 xl:gap-20 why-choose-us-wrapper"
+    >
+      <div class="flex flex-col col-span-6 gap-4 why-choose-us-left">
+        <div class="section-title">
+          <span class="sub-title">Why choose Us</span>
+          <h2 class="title">Who we are and what we do</h2>
+        </div>
+        <img src="/images/about-01.jpg" alt="about-01" />
+      </div>
+      <div class="relative col-span-6 why-choose-us-right">
+        <img src="/images/about-02.jpg" alt="about-02" />
+        <p class="mt-4 mb-6 leading-6">
+          We know this in our gut, but what can we do about it? How can we
+          motivate ourselves? One of the most difficult aspects of achieving
+          success is staying motivated over the long haul.
+        </p>
+        <a href="#" class="inline-block overflow-hidden spa-button">
+          <div class="spa-button-overlay"></div>
+          <div class="flex relative gap-4 items-center z-1">
+            <span class="capitalize">discover more</span>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- WHY CHOOSE US END -->
+
+    <!-- CATEGORY BEGIN -->
+    <section class="container grid grid-cols-12 gap-3 mt-28 x:gap-20 category">
+      <div class="col-span-12 xl:col-span-4">
+        <div class="!mr-0 section-title">
+          <span class="sub-title">Categories</span>
+          <h2 class="title">Selected category from our spa</h2>
+          <p class="section-description">
+            If success is a process with a number of defined steps, then it is
+            just like any other process.
+          </p>
+        </div>
+        <a
+          href="#"
+          class="inline-block overflow-hidden spa-button max-w-[200px]"
+        >
+          <div class="spa-button-overlay"></div>
+          <div class="flex relative gap-4 justify-center items-center z-1">
+            <span class="capitalize">Category more</span>
+          </div>
+        </a>
+      </div>
+      <div class="relative col-span-12 xl:col-span-8">
+        <div class="swiper category-slide max-h-[240px]">
+          <div class="swiper-wrapper">
+            <div class="overflow-hidden relative swiper-slide group">
+              <img src="/images/category-01.jpg" alt="category-01" />
+              <div
+                class="category-item group-hover:bottom-[10px] hover:text-primary"
+              >
+                <a href="#">Finnish Sauna</a>
+              </div>
+            </div>
+            <div class="overflow-hidden relative swiper-slide group">
+              <img src="/images/category-02.jpg" alt="category-01" />
+              <div
+                class="category-item group-hover:bottom-[10px] hover:text-primary"
+              >
+                <a href="#">Finnish Sauna</a>
+              </div>
+            </div>
+            <div class="overflow-hidden relative swiper-slide group">
+              <img src="/images/category-03.jpg" alt="category-01" />
+              <div
+                class="category-item group-hover:bottom-[10px] hover:text-primary"
+              >
+                <a href="#">Finnish Sauna</a>
+              </div>
+            </div>
+            <div class="overflow-hidden relative swiper-slide group">
+              <img src="/images/category-04.jpg" alt="category-01" />
+              <div
+                class="category-item group-hover:bottom-[10px] hover:text-primary"
+              >
+                <a href="#">Finnish Sauna</a>
+              </div>
+            </div>
+            <div class="overflow-hidden relative swiper-slide group">
+              <img src="/images/category-05.jpg" alt="category-01" />
+              <div
+                class="category-item group-hover:bottom-[10px] hover:text-primary"
+              >
+                <a href="#">Finnish Sauna</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CATEGORY END -->
+
+    <!-- FEATURES BEGIN -->
+    <section class="grid grid-cols-12 mt-28 feature">
+      <div class="col-span-6 feature-left">
+        <img
+          src="/images/features-bg.jpg"
+          alt="features"
+          class="h-full image-fit"
+        />
+      </div>
+      <div
+        class="flex flex-col col-span-6 gap-4 p-4 bg-black sm:p-20 feature-right"
       >
-        Get Started
-      </button>
-    </div>
+        <div class="!mr-0 section-title text-white">
+          <span class="!text-white sub-title">Features</span>
+          <h2 class="title">Amazing Features</h2>
+          <p
+            class="!text-white section-description leading-6 !text-[18px] !text-medium"
+          >
+            The first thing to remember about success is that it is a process –
+            nothing more, nothing less. There is really no magic to it and it’s
+            not reserved only for a select few people.
+          </p>
+        </div>
+        <div class="flex flex-col gap-10 feature-left_content">
+          <div class="flex flex-col gap-2">
+            <div class="flex gap-3 items-center text-white">
+              <div class="p-3 bg-primary">
+                <img
+                  src="/images/hot-stones.png"
+                  alt="hot stones"
+                  class="image-fit !w-[40px] !h-[40px]"
+                />
+              </div>
+              <h2 class="text-4xl font-semibold">Hot stones</h2>
+            </div>
+            <p class="leading-7 text-[18px] font-normal text-white mt-4">
+              Having clarity of purpose and a clear picture of what you desire,
+              is probably the single most important factor in achievement.
+            </p>
+          </div>
+          <div class="flex flex-col gap-2">
+            <div class="flex gap-3 items-center text-white">
+              <div class="p-3 bg-primary">
+                <img
+                  src="/images/relaxation.png"
+                  alt="relaxation"
+                  class="image-fit !w-[40px] !h-[40px]"
+                />
+              </div>
+              <h2 class="text-4xl font-semibold">Relaxation</h2>
+            </div>
+            <p class="leading-7 text-[18px] font-normal text-white mt-4">
+              Having clarity of purpose and a clear picture of what you desire,
+              is probably the single most important factor in achievement.
+            </p>
+          </div>
+          <div class="flex flex-col gap-2">
+            <div class="flex gap-3 items-center text-white">
+              <div class="p-3 bg-primary">
+                <img
+                  src="/images/thai.png"
+                  alt="thai"
+                  class="image-fit !w-[40px] !h-[40px]"
+                />
+              </div>
+              <h2 class="text-4xl font-semibold">Thai</h2>
+            </div>
+            <p class="leading-7 text-[18px] font-normal text-white mt-4">
+              Having clarity of purpose and a clear picture of what you desire,
+              is probably the single most important factor in achievement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FEATURES END -->
+
+    <!-- SERVICES BEGIN -->
+    <section class="container px-6 pt-28 service-wrapper">
+      <div
+        class="!mr-0 section-title flex justify-center items-center flex-col"
+      >
+        <span class="sub-title-v2">Our Services</span>
+        <h2 class="text-center title">Natural Beauty Spa Center</h2>
+        <p class="text-center section-description">
+          I truly believe Augustine’s words are true and if you look at history
+          you know it is true. There are many people in the world with amazing
+          talents who realize.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-12 gap-5 xl:gap-16">
+        <div class="flex flex-col col-span-12 xl:col-span-6">
+          <div class="flex flex-col gap-5 items-center sm:flex-row">
+            <img
+              src="/images/service-1.jpg"
+              alt="thai services"
+              class="hidden sm:block"
+            />
+            <div class="flex relative flex-col flex-1 gap-2 w-full">
+              <div
+                class="flex gap-2 justify-between sm:justify-normal sm:items-end"
+              >
+                <h4 class="text-2xl font-semibold sm:text-4xl leading-0">
+                  Thai Massage
+                </h4>
+                <div class="hidden service-border sm:block"></div>
+                <div class="flex gap-2 items-end">
+                  <p
+                    class="text-2xl font-bold -translate-y-1 leading-0 text-primary"
+                  >
+                    $59
+                  </p>
+                  <p
+                    class="text-sm font-medium line-through opacity-60 -translate-y-2 leading-0"
+                  >
+                    $70
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-3 justify-between items-center">
+                <p class="text-xs opacity-80 sm:text-sm">
+                  Focus is having the unwavering
+                </p>
+                <p class="text-xs opacity-80 sm:text-sm">80 Minutes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col col-span-12 xl:col-span-6">
+          <div class="flex flex-col gap-5 items-center sm:flex-row">
+            <img
+              src="/images/service-1.jpg"
+              alt="thai services"
+              class="hidden sm:block"
+            />
+            <div class="flex relative flex-col flex-1 gap-2 w-full">
+              <div
+                class="flex gap-2 justify-between sm:justify-normal sm:items-end"
+              >
+                <h4 class="text-2xl font-semibold sm:text-4xl leading-0">
+                  Thai Massage
+                </h4>
+                <div class="hidden service-border sm:block"></div>
+                <div class="flex gap-2 items-end">
+                  <p
+                    class="text-2xl font-bold -translate-y-1 leading-0 text-primary"
+                  >
+                    $59
+                  </p>
+                  <p
+                    class="text-sm font-medium line-through opacity-60 -translate-y-2 leading-0"
+                  >
+                    $70
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-3 justify-between items-center">
+                <p class="text-xs opacity-80 sm:text-sm">
+                  Focus is having the unwavering
+                </p>
+                <p class="text-xs opacity-80 sm:text-sm">80 Minutes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SERVICES END -->
+
+    <!-- REVIEWS BEGIN -->
+    <section class="mt-28 review-wrapper">
+      <div
+        class="!mr-0 section-title flex justify-center items-center flex-col !mb-20"
+      >
+        <span class="!text-white before:!bg-white after:!bg-white sub-title-v2"
+          >What Other Say</span
+        >
+        <h2 class="title !text-white text-center">Our Customer Reviews</h2>
+      </div>
+      <div
+        class="container swiper review-slide !max-w-[90%] sm:!max-w-[60%] cursor-grab"
+      >
+        <div class="!bg-transparent swiper-wrapper">
+          <div
+            class="!flex !flex-col !gap-6 !bg-transparent swiper-slide !items-center !justify-center"
+          >
+            <img
+              src="/images/quote.svg"
+              alt="quote"
+              class="image-fit !w-[80px] !h-[80px]"
+            />
+            <p class="leading-8 text-center text-white text-ellipsis">
+              So, there you have it; the six steps that will help you to the
+              fabled land of achievement and success! You now have the
+              opportunity to push ahead and reach your potential.
+            </p>
+            <div class="flex gap-3 justify-center items-center text-white">
+              <h2 class="text-2xl">Felica Queen</h2>
+              <span>|</span>
+              <span class="font-semibold text-primary">Relax massage</span>
+            </div>
+          </div>
+          <div
+            class="!flex !flex-col !gap-6 !bg-transparent swiper-slide !items-center !justify-center"
+          >
+            <img
+              src="/images/quote.svg"
+              alt="quote"
+              class="image-fit !w-[80px] !h-[80px]"
+            />
+            <p class="leading-8 text-center text-white text-ellipsis">
+              So, there you have it; the six steps that will help you to the
+              fabled land of achievement and success! You now have the
+              opportunity to push ahead and reach your potential.
+            </p>
+            <div class="flex gap-3 justify-center items-center text-white">
+              <h2 class="text-2xl">Felica Queen</h2>
+              <span>|</span>
+              <span class="font-semibold text-primary">Relax massage</span>
+            </div>
+          </div>
+          <div
+            class="!flex !flex-col !gap-6 !bg-transparent swiper-slide !items-center !justify-center"
+          >
+            <img
+              src="/images/quote.svg"
+              alt="quote"
+              class="image-fit !w-[80px] !h-[80px]"
+            />
+            <p class="leading-8 text-center text-white text-ellipsis">
+              So, there you have it; the six steps that will help you to the
+              fabled land of achievement and success! You now have the
+              opportunity to push ahead and reach your potential.
+            </p>
+            <div class="flex gap-3 justify-center items-center text-white">
+              <h2 class="text-2xl">Felica Queen</h2>
+              <span>|</span>
+              <span class="font-semibold text-primary">Relax massage</span>
+            </div>
+          </div>
+          <div
+            class="!flex !flex-col !gap-6 !bg-transparent swiper-slide !items-center !justify-center"
+          >
+            <img
+              src="/images/quote.svg"
+              alt="quote"
+              class="image-fit !w-[80px] !h-[80px]"
+            />
+            <p class="leading-8 text-center text-white text-ellipsis">
+              So, there you have it; the six steps that will help you to the
+              fabled land of achievement and success! You now have the
+              opportunity to push ahead and reach your potential.
+            </p>
+            <div class="flex gap-3 justify-center items-center text-white">
+              <h2 class="text-2xl">Felica Queen</h2>
+              <span>|</span>
+              <span class="font-semibold text-primary">Relax massage</span>
+            </div>
+          </div>
+          <div
+            class="!flex !flex-col !gap-6 !bg-transparent swiper-slide !items-center !justify-center"
+          >
+            <img
+              src="/images/quote.svg"
+              alt="quote"
+              class="image-fit !w-[80px] !h-[80px]"
+            />
+            <p class="leading-8 text-center text-white text-ellipsis">
+              So, there you have it; the six steps that will help you to the
+              fabled land of achievement and success! You now have the
+              opportunity to push ahead and reach your potential.
+            </p>
+            <div class="flex gap-3 justify-center items-center text-white">
+              <h2 class="text-2xl">Felica Queen</h2>
+              <span>|</span>
+              <span class="font-semibold text-primary">Relax massage</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- REVIEWS END -->
+
+    <!-- CONTACT US BEGIN -->
+    <section
+      class="container flex flex-col gap-4 p-20 mt-28 appointment-wrapper"
+    >
+      <div class="!mr-0 section-title">
+        <span class="sub-title">Contact Us</span>
+        <h2 class="title">We'd Love To Hear From You</h2>
+        <p class="section-description !leading-8 !text-[18px] !text-medium">
+          Get the oars in the water and start rowing. Execution is the single
+          biggest factor in achievement so the faster and better your execution.
+        </p>
+      </div>
+      <form class="flex flex-col gap-4">
+        <div class="flex gap-2">
+          <input type="text" class="input" placeholder="Full name" />
+          <input type="text" class="input" placeholder="Your email" />
+        </div>
+        <input type="text" class="input" placeholder="Phone number" />
+        <textarea rows="3" class="textarea" placeholder="Comment"></textarea>
+        <button type="submit" class="spa-button max-w-[200px]">
+          <div class="spa-button-overlay"></div>
+          <span class="z-[1] relative">Send Message</span>
+        </button>
+      </form>
+    </section>
+    <!-- CONTACT US END -->
+
+    <!-- FOOTER BEGIN -->
+    <footer class="mt-20 pt-10 bg-[#FEF6F3] flex flex-col footer-wrapper">
+      <div class="grid grid-cols-12 gap-3 px-6 pb-10 xl:gap-16">
+        <div class="flex flex-col col-span-12 gap-3 pt-6 md:col-span-3">
+          <h2 class="text-3xl font-bold">Contact Information</h2>
+          <div class="flex gap-3 items-center">
+            <i class="fa-solid fa-location-dot text-primary"></i>
+            6580 Allison Turnpike Creminfort, AL 32808-4509
+          </div>
+          <div class="flex gap-3 items-center">
+            <i class="fa-solid fa-phone text-primary"></i>
+            (123) 345-6789
+          </div>
+          <div class="flex gap-3 items-center">
+            <i class="fa-regular fa-envelope text-primary"></i>
+            support@luxuryspa.com
+          </div>
+          <div class="flex gap-3 justify-start items-center mt-8">
+            <a href="#" class="social-icon">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-col col-span-12 gap-3 pt-6 md:col-span-2">
+          <h2 class="text-3xl font-bold">Working Hours</h2>
+          <div class="flex gap-3 items-center">
+            Mon – Fri: 8.00 am – 10.00 pm
+          </div>
+          <div class="flex gap-3 items-center">Sat: 9.00 am – 11.00 pm</div>
+          <div class="flex gap-3 items-center">Sun: 10.00 am – 11.30 pm</div>
+        </div>
+        <div class="flex flex-col col-span-12 gap-3 pt-6 md:col-span-2">
+          <h2 class="text-3xl font-bold">Useful Link</h2>
+          <a href="" class="transition-all hover:text-primary">Login</a>
+          <a href="" class="transition-all hover:text-primary">Sign Up</a>
+          <a href="" class="transition-all hover:text-primary">Appointment</a>
+        </div>
+        <div class="flex flex-col col-span-12 gap-10 md:col-span-5">
+          <img
+            src="/images/logo-dark.svg"
+            alt="logo"
+            class="image-fit !w-[160px] !h-[74px]"
+          />
+          <p class="leading-8 opacity-65">
+            Welcome to a true oasis we designed especially for you. Here you’ll
+            find absolutely everything you’ll need to present your health, spa
+            or beauty oriented business the modern way.
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex gap-3 justify-between items-center px-4 py-6 bg-[#FBE6DE] flex-col sm:flex-row"
+      >
+        <p class="text-center">
+          © Copyright 2024
+          <a href="" class="font-bold text-primary">GoSpa</a> All Rights
+          Reserved
+        </p>
+        <p class="text-center">
+          Develop and design by
+          <span class="font-bold text-primary">Hector Bien</span>
+        </p>
+      </div>
+    </footer>
+    <!-- FOOTER END -->
   </body>
 </html>

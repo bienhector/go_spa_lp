@@ -1,0 +1,15 @@
+.sidebar-wrapper {
+  @apply flex flex-col fixed top-0 right-0 gap-2 bg-white w-[400px] h-screen z-[3] translate-x-full;
+
+  .close-icon {
+    @apply flex justify-end p-6 text-[24px] transition-all hover:text-black text-[#7F7F7F];
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', sans-serif !important;
+  }
+
+  .sidebar-content {
+    @apply my-[50px] flex flex-col gap-3 text-[16px] leading-6 text-[#131310];
+  }
+}
